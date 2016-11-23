@@ -12,7 +12,7 @@ public class Ship extends Mover
         setGravity(0);
         // Set the objects this ship can not go through.
         setBlockingClasses(  new Class[]{Grass.class}  );
-        GreenfootImage ship = getImage();
+        GreenfootImage ship = new GreenfootImage("http://i65.tinypic.com/rvhg6v.png");
         ship.scale(ship.getWidth() - 150, ship.getHeight() - 150);
         setImage(ship); 
 
