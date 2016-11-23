@@ -26,13 +26,13 @@ public class Ship extends Mover
         if(Greenfoot.isKeyDown("left"))
         {
             setRotation(0);
-            move(1);
+            move(-1);
         }
               
         if(Greenfoot.isKeyDown("right"))
         {
             setRotation(180);
-            move(1);
+            move(-1);
         }
         
         if(Greenfoot.isKeyDown("down"))
@@ -44,7 +44,7 @@ public class Ship extends Mover
         if(Greenfoot.isKeyDown("up"))
         {
             setRotation(90);
-            move(1);
+            move(-1);
         }
     }    
 }

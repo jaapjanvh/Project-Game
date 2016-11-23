@@ -41,38 +41,14 @@ public class Mover extends Actor
         if(canMoveDown())
             setLocation(getX(), getY() - speed);
     }
-
-    /**
-     * Try to make the {@code Mover} move left, at a speed specified by {@link #setMovementSpeed(int)}
-     * 
-     * @see moveRight()
-     */
+   
     public void moveLeft()
     {
         if(canMoveLeft())
             setLocation (getX() - speed, getY());
     }
 
-    /**
-     * Detects if this {@code Mover} is just above a block that has been set as a barrier by {@link #setBlockingClasses(Class[])}
-     */
-    public boolean onGround()
-    {
-        boolean b = false;
-        for(Class c: barrier)
-        {
-            Actor under = getOneObjectAtOffset(0, getImage().getHeight()/2 + vSpeed, c);
-            if(under != null)
-                b = true;
-        }
-        if(b == true)
-        {
-            vSpeed = 0;
-        }
-        return b;
-    }
-
-    /**
+      /**
      * Detects if this {@code Mover} can move both left and right
      * 
      * @see canMoveLeft()
@@ -152,59 +128,7 @@ public class Mover extends Actor
         }
         return true;
     }
-    
-    /**
-     * Detects if this {@code Mover} can jump, not being blocked by any classes set as
-     * barriers by {@link #setBlockingClasses(Class[])}
-     * 
-     * @see canMoveLeft()
-     * @see canMoveRight()
-     * @see jump(int)
-     */
-    public boolean canJump()
-    {
-        for(Class c: barrier)
-        {
-            List<Actor> bs = getIntersectingObjects(c);
-            if(bs != null) {
-                for(Actor b: bs)
-                {
-                    if(b.getY() > this.getY())
-                        return false;
-                }
-            }
-        }
-        return true;
-    }
-
-    /**
-     * Tries to jump, succedes if not blocked by classes set as barriers by {@link setBlockingClasses(Class[])}
-     * 
-     * @see canJump()
-     */
-    public void jump(int speed)
-    {
-        if(canJump())
-            vSpeed = -speed;
-    }
-
-    /**
-     * Makes the {@code Mover} fall if not supported by a class set as a barrier by {@link setBlockingClasses(Class[])}.
-     * Falling will accelerate, depending on the set gravity, as the {@code Mover} falls farther. Should normally be called in the {@code act()} 
-     * method every time.
-     * 
-     * @see setGravity(int)
-     * @see jump(int)
-     */
-    public void doGravity()
-    {
-        if(vSpeed >= 0 && onGround())  return;
-        if(vSpeed <= 0 && (!canJump()))  vSpeed = -1;
-        setLocation(getX(), getY() + vSpeed);
-        vSpeed = vSpeed + acceleration;
-        
-    }
-
+   
     /**
      * Returns a value indicating if the {@code Mover} is at the bottom of the world.
      */
