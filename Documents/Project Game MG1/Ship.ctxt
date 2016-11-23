@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Ship
+comment1.params=
+comment1.target=Ship()
+comment1.text=\r\n\ Creates\ a\ new\ ship\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Check\ for\ key\ presses\ that\ signal\ movements\r\n
+numComments=3
