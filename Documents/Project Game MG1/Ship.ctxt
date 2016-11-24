@@ -6,4 +6,6 @@ comment1.text=\r\n\ Creates\ a\ new\ ship\r\n
 comment2.params=
 comment2.target=void\ act()
 comment2.text=\r\n\ Check\ for\ key\ presses\ that\ signal\ movements\r\n
-numComments=3
+comment3.params=x\ y
+comment3.target=void\ detectCollision(int,\ int)
+numComments=4

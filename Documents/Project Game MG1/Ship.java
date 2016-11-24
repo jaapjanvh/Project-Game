@@ -23,28 +23,53 @@ public class Ship extends Mover
      */
     public void act() 
     {
+        int offsetX=0;
+        int offsetY=0;
         if(Greenfoot.isKeyDown("left"))
         {
             setRotation(0);
             move(-1);
+            offsetX=-50;
         }
               
         if(Greenfoot.isKeyDown("right"))
         {
             setRotation(180);
             move(-1);
+            offsetX=50;
         }
         
         if(Greenfoot.isKeyDown("down"))
         {
             setRotation(270);
             move(-1);
+            offsetY=50;
         }
         
         if(Greenfoot.isKeyDown("up"))
         {
             setRotation(90);
             move(-1);
+            offsetY=-50;
         }
+        detectCollision(offsetX,offsetY);
     }    
+    
+    public void detectCollision(int x,int y)
+    {
+        Actor border;
+        border=getOneObjectAtOffset(x,y,Border.class);
+        if (border!=null)
+        {
+            Greenfoot.playSound("GameOver.wav");
+            Greenfoot.stop();
+        }
+        
+        Actor port;
+        port=getOneObjectAtOffset(0,0,Port.class);
+        if (port!=null)
+        {
+            //boot stopt met varen voor X seconden en verandert in een leeg bootje
+        }
+    }
 }
