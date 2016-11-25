@@ -61,6 +61,9 @@ public class Ship extends Mover
         border=getOneObjectAtOffset(x,y,Border.class);
         if (border!=null)
         {
+            World myWorld = getWorld();
+            GameOver gameover = new GameOver();
+            myWorld.addObject(gameover, myWorld.getWidth()/2, myWorld.getHeight()/2);
             Greenfoot.playSound("GameOver.wav");
             Greenfoot.stop();
         }
@@ -70,6 +73,9 @@ public class Ship extends Mover
         if (port!=null)
         {
             //boot stopt met varen voor X seconden en verandert in een leeg bootje
+            GreenfootImage ship = new GreenfootImage("wombat.png");
+            //ship.scale(ship.getWidth() - 150, ship.getHeight() - 150);
+            setImage(ship); 
         }
     }
 }
