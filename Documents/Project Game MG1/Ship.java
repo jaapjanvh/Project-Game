@@ -9,7 +9,6 @@ public class Ship extends Mover
     public Ship()
     {
         setMovementSpeed(2);
-        setGravity(0);
         // Set the objects this ship can not go through.
         setBlockingClasses(  new Class[]{Grass.class}  );
         GreenfootImage ship = new GreenfootImage("http://i65.tinypic.com/rvhg6v.png");
@@ -52,6 +51,7 @@ public class Ship extends Mover
             move(-1);
             offsetY=-50;
         }
+        
         detectCollision(offsetX,offsetY);
     }    
     
@@ -61,7 +61,7 @@ public class Ship extends Mover
         border=getOneObjectAtOffset(x,y,Border.class);
         if (border!=null)
         {
-            World myWorld = getWorld();
+        World myWorld = getWorld();
             GameOver gameover = new GameOver();
             myWorld.addObject(gameover, myWorld.getWidth()/2, myWorld.getHeight()/2);
             Greenfoot.playSound("GameOver.wav");
@@ -73,9 +73,10 @@ public class Ship extends Mover
         if (port!=null)
         {
             //boot stopt met varen voor X seconden en verandert in een leeg bootje
-            GreenfootImage ship = new GreenfootImage("wombat.png");
-            //ship.scale(ship.getWidth() - 150, ship.getHeight() - 150);
-            setImage(ship); 
+            GreenfootImage emptyship = new GreenfootImage("http://i65.tinypic.com/oacj0m.png");
+            emptyship.scale(emptyship.getWidth() - 54, emptyship.getHeight() - 14);
+            setImage(emptyship); 
+            
         }
     }
 }

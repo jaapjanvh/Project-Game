@@ -22,6 +22,8 @@ public class DemoWorld extends World
 
         addObject(new Ship(), 0, 200);
         prepare();
+        
+        setPaintOrder(Ship.class);
     }
 
     /**
