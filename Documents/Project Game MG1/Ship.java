@@ -72,6 +72,11 @@ public class Ship extends Mover
         port=getOneObjectAtOffset(0,0,Port.class);
         if (port!=null)
         {
+            //10 punten tijdens lossen
+            World myWorld = getWorld();
+            DemoWorld demoworld= (DemoWorld)myWorld;
+            Counter counter = demoworld.getCounter();
+            counter.addScore(); 
             //boot stopt met varen voor X seconden en verandert in een leeg bootje
             GreenfootImage emptyship = new GreenfootImage("http://i65.tinypic.com/oacj0m.png");
             emptyship.scale(emptyship.getWidth() - 54, emptyship.getHeight() - 14);

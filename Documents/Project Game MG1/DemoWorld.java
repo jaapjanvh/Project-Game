@@ -2,7 +2,7 @@ import greenfoot.*;
 
 
 public class DemoWorld extends World
-{
+{   Counter counter= new Counter();
     /**
      * Make a new world with grass and a ship.
      * 
@@ -24,14 +24,20 @@ public class DemoWorld extends World
         prepare();
         
         setPaintOrder(Ship.class);
+        
     }
-
+   
+    public Counter getCounter()
+    {
+        return counter;
+    }
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
     private void prepare()
     {
+        addObject(counter, 350, 40);
         Port port = new Port();
         addObject(port,678,243);
         Port port2 = new Port();
