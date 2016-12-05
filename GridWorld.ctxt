@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=GridWorld
+comment1.params=
+comment1.target=GridWorld()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=actor\ x\ y
+comment3.target=void\ addObjectToGrid(greenfoot.Actor,\ int,\ int)
+comment4.params=x\ y
+comment4.target=void\ removeObjectAt(int,\ int)
+numComments=5
