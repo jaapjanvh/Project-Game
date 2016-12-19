@@ -6,15 +6,20 @@ public class Ship extends Actor
     
     private int movementSpeed = 1;
     private ProgressBar progressBar;
+    private List<Ship> ships;
+    
+    public Ship () {
+        this.setImage(new GreenfootImage("http://oi66.tinypic.com/2gufxo5.jpg"));
+        this.getImage().scale(48, 12);
+        this.getImage().rotate(180); 
+    }
     
     public void act() 
     {
-        setImage(new GreenfootImage("http://oi66.tinypic.com/2gufxo5.jpg"));
-        getImage().scale(48, 12);
-        
         move(movementSpeed);
         
         this.handleArrowCollision();
+        this.handleShipCollision();
         this.handleBorderCollision();
         this.handleUnloadingPointCollision();
     }
@@ -29,12 +34,19 @@ public class Ship extends Actor
         }
     }
     
+    private void handleShipCollision() {
+       Ship ship = (Ship) this.getOneIntersectingObject(Ship.class);
+       
+       if (null != ship) {
+            GridWorld world = (GridWorld) getWorld();
+            world.triggerGameOver();
+       }
+    }
+    
     private void handleBorderCollision() {
         if (isTouching(Wall.class)) {
-            World myWorld = getWorld();
-            myWorld.addObject(new GameOver(), myWorld.getWidth() / 2, myWorld.getHeight() / 2);
-            Greenfoot.playSound("GameOver.wav");
-            Greenfoot.stop();
+            GridWorld world = (GridWorld) getWorld();
+            world.triggerGameOver();
         }
     }
     
@@ -51,12 +63,12 @@ public class Ship extends Actor
         if (stop == true && null == this.progressBar) {
             movementSpeed = 0;
             this.progressBar = new ProgressBar();
-            getWorld().addObject(this.progressBar, getX(), getY() - 10);
+            getWorld().addObject(this.progressBar, this.getX() - 45, this.getY() - 15);
             
         }
         
         if (this.progressBar != null) {
-            this.progressBar.incrementProgress(10);
+            this.progressBar.incrementProgress(50);
             
             if (this.progressBar.progress == 9900) {
                 List<Counter> counters = getWorld().getObjects(Counter.class);

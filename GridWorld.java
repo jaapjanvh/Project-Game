@@ -1,4 +1,5 @@
 import greenfoot.*;
+import java.util.List;
 
 public class GridWorld extends World
 {
@@ -55,14 +56,29 @@ public class GridWorld extends World
     }
     
     public void act() {
-        this.counter++;
-        
-        if (this.counter == 1) {
-            Ship ship = new Ship();
-            addObjectToGrid(ship, 0, 12);
-            ship.setLocation(ship.getX(), ship.getY() + 4);
+        if (this.counter == 0) {
+            addObjectToGrid(new Ship(), 0, 12);
+        } else if (this.counter == 1500) {
+            addObjectToGrid(new Ship(), 0, 12);
+        } else if (this.counter == 1750) {
+            addObjectToGrid(new Ship(), 0, 12);
+        } else if (this.counter == 2000) {
+            addObjectToGrid(new Ship(), 0, 12);
+        } else if (this.counter == 2750) {
+            addObjectToGrid(new Ship(), 0, 12);
+        } else if (this.counter == 2850) {
+            addObjectToGrid(new Ship(), 0, 12);
+        } else if (this.counter == 3500) {
+            addObjectToGrid(new Ship(), 0, 12);
+        } else if (this.counter == 3750) {
+            addObjectToGrid(new Ship(), 0, 12);
+        } else if (this.counter == 4000) {
+            addObjectToGrid(new Ship(), 0, 12);
+        } else if (this.counter == 4250) {
+            addObjectToGrid(new Ship(), 0, 12);
         }
-    
+        
+        this.counter++;
     }
 
     private void addObjectToGrid(Actor actor, int x, int y) {
@@ -78,12 +94,22 @@ public class GridWorld extends World
                 grid[x][y] = actor;
             }
         }
+        
+        if (actor instanceof Ship) {
+            actor.setLocation(actor.getX(), actor.getY() + 6);
+        }
     }
     
     private void removeObjectAt(int x, int y) {
         Actor actor = grid[x][y];
         removeObject(actor);
         grid[x][y] = null;
+    }
+    
+    public void triggerGameOver() {
+        this.addObject(new GameOver(), this.getWidth() / 2, this.getHeight() / 2);
+        Greenfoot.playSound("Titanic.mp3");
+        Greenfoot.stop();
     }
     
 }
