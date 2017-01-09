@@ -56,7 +56,7 @@ public class Menu extends World
             Greenfoot.setWorld(new MyWorld()); 
         }
         if(Greenfoot.mouseClicked(gameknop3)) {
-            Greenfoot.setWorld(new PortWorld()); 
+            Greenfoot.setWorld(new TegelWorld()); 
         }
     }
 }

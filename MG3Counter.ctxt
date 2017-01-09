@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=MG3Counter
+comment1.params=maxMoves
+comment1.target=MG3Counter(int)
+comment2.params=
+comment2.target=void\ decreaseScore()
+comment3.params=
+comment3.target=void\ updateImage()
+numComments=4
