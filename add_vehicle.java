@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class add_vehicle extends Actor
 {
-    MyWorld world = (MyWorld)getWorld();
+    MiniGame2 world = (MiniGame2)getWorld();
     /**
      * Act - do whatever the add_vehicle wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -23,7 +23,7 @@ public class add_vehicle extends Actor
      */
     public void addnewvehice()
     {
-        MyWorld world = (MyWorld)getWorld();
+        MiniGame2 world = (MiniGame2)getWorld();
         if (world.vmg2_bluecontainer > 0 || world.vmg2_redcontainer > 0 || world.vmg2_greencontainer > 0)
          {
                  if (world.vmg2_truck == 0)

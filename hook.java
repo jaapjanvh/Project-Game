@@ -28,7 +28,7 @@ public class hook extends Actor
     } 
 
     public void act() {   
-        MyWorld world = (MyWorld)getWorld();
+        MiniGame2 world = (MiniGame2)getWorld();
         //canmove();
         checkInput();
         maxmove();

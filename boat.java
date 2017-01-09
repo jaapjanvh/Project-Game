@@ -14,6 +14,6 @@ public class boat extends Actor
      */
     public void act() 
     {
-       MyWorld world = (MyWorld)getWorld(); // Add your action code here.
+       MiniGame2 world = (MiniGame2)getWorld(); // Add your action code here.
     }    
 }

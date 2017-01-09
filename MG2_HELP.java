@@ -26,7 +26,7 @@ public class MG2_HELP extends Actor
         }
     }
     private void click(){
-        MyWorld world = (MyWorld)getWorld();
+        MiniGame2 world = (MiniGame2)getWorld();
         if (Greenfoot.mousePressed(this)) {
             world.addObject(new InfoPanel(),640,375);
             Greenfoot.delay(1000);

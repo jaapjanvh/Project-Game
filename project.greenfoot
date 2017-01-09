@@ -24,9 +24,15 @@ class.MG3Wall.superclass=greenfoot.Actor
 class.Menu.image=Prachtig2.png
 class.Menu.superclass=greenfoot.World
 class.MessageBox.superclass=greenfoot.Actor
+<<<<<<< HEAD
 class.Mover.superclass=greenfoot.Actor
 class.MyWorld.image=bluerock.jpg
 class.MyWorld.superclass=greenfoot.World
+=======
+class.MiniGame2.image=bluerock.jpg
+class.MiniGame2.superclass=greenfoot.World
+class.Mover.superclass=greenfoot.Actor
+>>>>>>> 984b740f7d46ed703c29a7868d4b6025a7f877d4
 class.PopUp.superclass=greenfoot.Actor
 class.PortWorld.image=bluerock.jpg
 class.PortWorld.superclass=greenfoot.World
@@ -117,10 +123,17 @@ dependency25.from=Menu
 dependency25.to=PortWorld
 dependency25.type=UsesDependency
 dependency26.from=Menu
+<<<<<<< HEAD
 dependency26.to=MyWorld
 dependency26.type=UsesDependency
 dependency27.from=add_vehicle
 dependency27.to=MyWorld
+=======
+dependency26.to=MiniGame2
+dependency26.type=UsesDependency
+dependency27.from=add_vehicle
+dependency27.to=MiniGame2
+>>>>>>> 984b740f7d46ed703c29a7868d4b6025a7f877d4
 dependency27.type=UsesDependency
 dependency28.from=add_vehicle
 dependency28.to=vehicle
@@ -131,6 +144,7 @@ dependency29.type=UsesDependency
 dependency3.from=PortWorld
 dependency3.to=Ship
 dependency3.type=UsesDependency
+<<<<<<< HEAD
 dependency30.from=MG2_HELP
 dependency30.to=MyWorld
 dependency30.type=UsesDependency
@@ -160,10 +174,42 @@ dependency38.to=Richting
 dependency38.type=UsesDependency
 dependency39.from=Tegel
 dependency39.to=TegelWorld
+=======
+dependency30.from=vehicle
+dependency30.to=MiniGame2
+dependency30.type=UsesDependency
+dependency31.from=vehicle
+dependency31.to=container_red
+dependency31.type=UsesDependency
+dependency32.from=vehicle
+dependency32.to=container_green
+dependency32.type=UsesDependency
+dependency33.from=vehicle
+dependency33.to=container_blue
+dependency33.type=UsesDependency
+dependency34.from=vehicle
+dependency34.to=Mover
+dependency34.type=UsesDependency
+dependency35.from=Menu
+dependency35.to=TegelWorld
+dependency35.type=UsesDependency
+dependency36.from=MiniGame2
+dependency36.to=hook
+dependency36.type=UsesDependency
+dependency37.from=MiniGame2
+dependency37.to=rope_small
+dependency37.type=UsesDependency
+dependency38.from=MiniGame2
+dependency38.to=crane
+dependency38.type=UsesDependency
+dependency39.from=MiniGame2
+dependency39.to=boat
+>>>>>>> 984b740f7d46ed703c29a7868d4b6025a7f877d4
 dependency39.type=UsesDependency
 dependency4.from=PortWorld
 dependency4.to=Arrow
 dependency4.type=UsesDependency
+<<<<<<< HEAD
 dependency40.from=Tegel
 dependency40.to=MG3Counter
 dependency40.type=UsesDependency
@@ -193,10 +239,42 @@ dependency48.to=crane
 dependency48.type=UsesDependency
 dependency49.from=MyWorld
 dependency49.to=boat
+=======
+dependency40.from=MiniGame2
+dependency40.to=water
+dependency40.type=UsesDependency
+dependency41.from=MiniGame2
+dependency41.to=road
+dependency41.type=UsesDependency
+dependency42.from=MiniGame2
+dependency42.to=add_vehicle
+dependency42.type=UsesDependency
+dependency43.from=MiniGame2
+dependency43.to=MG2_HELP
+dependency43.type=UsesDependency
+dependency44.from=MiniGame2
+dependency44.to=container_blue
+dependency44.type=UsesDependency
+dependency45.from=MiniGame2
+dependency45.to=container_green
+dependency45.type=UsesDependency
+dependency46.from=MiniGame2
+dependency46.to=container_red
+dependency46.type=UsesDependency
+dependency47.from=MiniGame2
+dependency47.to=vehicle
+dependency47.type=UsesDependency
+dependency48.from=Mover
+dependency48.to=hook
+dependency48.type=UsesDependency
+dependency49.from=Mover
+dependency49.to=MiniGame2
+>>>>>>> 984b740f7d46ed703c29a7868d4b6025a7f877d4
 dependency49.type=UsesDependency
 dependency5.from=Ship
 dependency5.to=Arrow
 dependency5.type=UsesDependency
+<<<<<<< HEAD
 dependency50.from=MyWorld
 dependency50.to=water
 dependency50.type=UsesDependency
@@ -290,6 +368,35 @@ dependency77.type=UsesDependency
 dependency78.from=TegelWorld
 dependency78.to=Menu
 dependency78.type=UsesDependency
+=======
+dependency50.from=container_blue
+dependency50.to=MiniGame2
+dependency50.type=UsesDependency
+dependency51.from=hook
+dependency51.to=MiniGame2
+dependency51.type=UsesDependency
+dependency52.from=hook
+dependency52.to=Mover
+dependency52.type=UsesDependency
+dependency53.from=boat
+dependency53.to=MiniGame2
+dependency53.type=UsesDependency
+dependency54.from=MG2_HELP
+dependency54.to=MiniGame2
+dependency54.type=UsesDependency
+dependency55.from=rope_small
+dependency55.to=MiniGame2
+dependency55.type=UsesDependency
+dependency56.from=rope_small
+dependency56.to=hook
+dependency56.type=UsesDependency
+dependency6.from=Ship
+dependency6.to=GameOver
+dependency6.type=UsesDependency
+dependency7.from=Ship
+dependency7.to=MG1Wall
+dependency7.type=UsesDependency
+>>>>>>> 984b740f7d46ed703c29a7868d4b6025a7f877d4
 dependency8.from=PortWorld
 dependency8.to=UnloadingPoint
 dependency8.type=UsesDependency
@@ -300,6 +407,7 @@ editor.fx.0.height=700
 editor.fx.0.width=700
 editor.fx.0.x=0
 editor.fx.0.y=0
+<<<<<<< HEAD
 editor.swing.0.height=808
 editor.swing.0.width=1440
 editor.swing.0.x=0
@@ -309,6 +417,17 @@ mainWindow.width=1440
 mainWindow.x=0
 mainWindow.y=23
 package.numDependencies=78
+=======
+editor.swing.0.height=1048
+editor.swing.0.width=1938
+editor.swing.0.x=-9
+editor.swing.0.y=-9
+mainWindow.height=1048
+mainWindow.width=1938
+mainWindow.x=-9
+mainWindow.y=-9
+package.numDependencies=56
+>>>>>>> 984b740f7d46ed703c29a7868d4b6025a7f877d4
 package.numTargets=41
 project.charset=UTF-8
 readme.height=58
@@ -452,11 +571,16 @@ target22.width=90
 target22.x=190
 target22.y=730
 target23.height=50
+<<<<<<< HEAD
 target23.name=MyWorld
+=======
+target23.name=Arrow
+>>>>>>> 984b740f7d46ed703c29a7868d4b6025a7f877d4
 target23.showInterface=false
 target23.type=ClassTarget
 target23.typeParameters=
 target23.width=80
+<<<<<<< HEAD
 target23.x=100
 target23.y=310
 target24.height=50
@@ -477,40 +601,91 @@ target25.x=140
 target25.y=550
 target26.height=50
 target26.name=GameMaster
+=======
+target23.x=10
+target23.y=130
+target24.height=50
+target24.name=container_blue
+target24.showInterface=false
+target24.type=ClassTarget
+target24.typeParameters=
+target24.width=120
+target24.x=140
+target24.y=550
+target25.height=50
+target25.name=GameMaster
+target25.showInterface=false
+target25.type=ClassTarget
+target25.typeParameters=
+target25.width=100
+target25.x=10
+target25.y=790
+target26.height=50
+target26.name=crane
+>>>>>>> 984b740f7d46ed703c29a7868d4b6025a7f877d4
 target26.naviview.expanded=true
 target26.showInterface=false
 target26.type=ClassTarget
 target26.typeParameters=
+<<<<<<< HEAD
 target26.width=100
 target26.x=10
 target26.y=790
 target27.height=50
 target27.name=crane
+=======
+target26.width=80
+target26.x=10
+target26.y=610
+target27.height=50
+target27.name=TryAgain
+>>>>>>> 984b740f7d46ed703c29a7868d4b6025a7f877d4
 target27.naviview.expanded=true
 target27.showInterface=false
 target27.type=ClassTarget
 target27.typeParameters=
 target27.width=80
+<<<<<<< HEAD
 target27.x=10
 target27.y=610
 target28.height=50
 target28.name=TryAgain
+=======
+target27.x=120
+target27.y=790
+target28.height=50
+target28.name=GameOver
+>>>>>>> 984b740f7d46ed703c29a7868d4b6025a7f877d4
 target28.naviview.expanded=true
 target28.showInterface=false
 target28.type=ClassTarget
 target28.typeParameters=
+<<<<<<< HEAD
 target28.width=80
 target28.x=120
 target28.y=790
 target29.height=50
 target29.name=GameOver
+=======
+target28.width=90
+target28.x=100
+target28.y=130
+target29.height=50
+target29.name=TegelFabriek
+>>>>>>> 984b740f7d46ed703c29a7868d4b6025a7f877d4
 target29.naviview.expanded=true
 target29.showInterface=false
 target29.type=ClassTarget
 target29.typeParameters=
+<<<<<<< HEAD
 target29.width=90
 target29.x=100
 target29.y=130
+=======
+target29.width=100
+target29.x=10
+target29.y=850
+>>>>>>> 984b740f7d46ed703c29a7868d4b6025a7f877d4
 target3.height=50
 target3.name=add_vehicle
 target3.naviview.expanded=true
@@ -521,30 +696,53 @@ target3.width=100
 target3.x=200
 target3.y=370
 target30.height=50
+<<<<<<< HEAD
 target30.name=TegelFabriek
+=======
+target30.name=TegelWorld
+>>>>>>> 984b740f7d46ed703c29a7868d4b6025a7f877d4
 target30.naviview.expanded=true
 target30.showInterface=false
 target30.type=ClassTarget
 target30.typeParameters=
+<<<<<<< HEAD
 target30.width=100
 target30.x=10
 target30.y=850
 target31.height=50
 target31.name=TegelWorld
+=======
+target30.width=90
+target30.x=210
+target30.y=790
+target31.height=50
+target31.name=rope_small
+>>>>>>> 984b740f7d46ed703c29a7868d4b6025a7f877d4
 target31.showInterface=false
 target31.type=ClassTarget
 target31.typeParameters=
 target31.width=90
+<<<<<<< HEAD
 target31.x=210
 target31.y=790
 target32.height=50
 target32.name=rope_small
+=======
+target31.x=100
+target31.y=610
+target32.height=50
+target32.name=MiniGame2
+>>>>>>> 984b740f7d46ed703c29a7868d4b6025a7f877d4
 target32.showInterface=false
 target32.type=ClassTarget
 target32.typeParameters=
 target32.width=90
 target32.x=100
+<<<<<<< HEAD
 target32.y=610
+=======
+target32.y=310
+>>>>>>> 984b740f7d46ed703c29a7868d4b6025a7f877d4
 target33.height=50
 target33.name=water
 target33.showInterface=false

@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class rope_small extends Actor
 {
+    MiniGame2 world = (MiniGame2)getWorld();
     /**
      * Act - do whatever the rope wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -54,7 +55,7 @@ public class rope_small extends Actor
         {
             if (Greenfoot.isKeyDown("down")) 
             { 
-                MyWorld world = (MyWorld)getWorld();
+                MiniGame2 world = (MiniGame2)getWorld();
                 image.scale(2, world.hook.getY() );
                 setLocation(getX(),world.hook.getY()/2+world.hook.vmg2_speed);
 
@@ -64,7 +65,7 @@ public class rope_small extends Actor
         {
             if (Greenfoot.isKeyDown("up")) 
             { 
-                MyWorld world = (MyWorld)getWorld();
+                MiniGame2 world = (MiniGame2)getWorld();
                 image.scale(2, world.hook.getY() );
                 setLocation(getX(),world.hook.getY()/2+world.hook.vmg2_speed);
             }

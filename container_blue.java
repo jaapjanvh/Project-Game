@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class container_blue extends Mover
 {
-    MyWorld world = (MyWorld)getWorld();
+    MiniGame2 world = (MiniGame2)getWorld();
     public static String vmg2_Blue = "blue";
     /**
      * Act - do whatever the container wants to do. This method is called whenever
