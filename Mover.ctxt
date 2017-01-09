@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Mover
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ container1\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ c_move()
+comment2.params=
+comment2.target=void\ mg2_MoveCont()
+comment3.params=
+comment3.target=void\ mg2_MoveCont1()
+comment4.params=
+comment4.target=void\ doGravity()
+comment5.params=newSpeed
+comment5.target=void\ setMovementSpeed(int)
+comment6.params=c
+comment6.target=void\ setBlockingClasses(java.lang.Class[])
+comment7.params=g
+comment7.target=void\ setGravity(int)
+comment8.params=
+comment8.target=void\ canmove_container()
+comment9.params=
+comment9.target=void\ mg2_TouchContainer()
+numComments=10

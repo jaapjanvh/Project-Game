@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=vehicle
+comment0.text=\r\n\ Vehicle\ class.\r\n\ Spawns\ in\ a\ random\ vehicle\ as\ long\ as\ there\ are\ containers\ in\ the\ world.\r\n\ \r\n\ @BramBrouwer\r\n\ \r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ vehicle\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=void\ load_vehicle()
+comment2.text=\r\n\ If\ a\ container\ is\ placed\ (collision)\ on\ a\ vehicle\ both\ will\ dissapear\ from\ the\ world.\r\n\ It\ will\ add\ a\ new\ vehicle\ and\ this\ function\ set\ a\ random\ colored\ vehicle\r\n
+comment3.params=
+comment3.target=void\ touchcontainer()
+comment3.text=\r\n\ If\ a\ container\ touches\ the\ vehicle\ (this\ actor)\ it\ deletes\ the\ container\ from\ the\ world.\r\n
+numComments=4

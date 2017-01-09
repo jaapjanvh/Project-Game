@@ -53,7 +53,7 @@ public class Menu extends World
             Greenfoot.setWorld(new PortWorld()); 
         }
         if(Greenfoot.mouseClicked(gameknop2)) {
-            Greenfoot.setWorld(new PortWorld()); 
+            Greenfoot.setWorld(new MyWorld()); 
         }
         if(Greenfoot.mouseClicked(gameknop3)) {
             Greenfoot.setWorld(new PortWorld()); 

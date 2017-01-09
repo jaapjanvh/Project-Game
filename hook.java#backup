@@ -1,0 +1,109 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+/**
+ * Write a description of class hook here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+
+
+public class hook extends Actor
+{
+    public static boolean vmg2_down;
+    public static boolean vmg2_up;
+    public static boolean vmg2_right;
+    public static boolean vmg2_left;
+    public static int vmg2_speed = 2 ;
+    /**
+     * Act - do whatever the hook wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+
+    public hook()
+    {
+        GreenfootImage image = getImage();  
+        image.scale(22, 60);
+        setImage(image);    
+    } 
+        
+    public void act() {   
+          canmove();
+          checkInput();
+    }
+    
+
+
+    //&& getOneIntersectingObject(container1.class) == null
+    
+    
+    private void checkInput()
+    {   
+        GreenfootImage image = getImage(); 
+        if (vmg2_right == true || Greenfoot.isKeyDown("space"))
+        {
+        if(Greenfoot.isKeyDown("right")  )
+        {
+            move(vmg2_speed);
+        }
+        }
+        if (vmg2_left == true || Greenfoot.isKeyDown("space"))
+        {
+        if(Greenfoot.isKeyDown("left"))
+        {
+            move(-vmg2_speed);
+        }
+        }
+        if (vmg2_up == true || Greenfoot.isKeyDown("space"))
+        {
+        if(Greenfoot.isKeyDown("up"))
+        {
+            setLocation(getX(), getY()-vmg2_speed*2);
+        }
+        }
+
+        if (vmg2_down == true || Greenfoot.isKeyDown("space"))
+        {
+            if(Greenfoot.isKeyDown("down"))
+            {
+                setLocation(getX(), getY()+vmg2_speed*3);
+            }
+        }
+    }
+    private void canmove()
+    {
+        GreenfootImage image = getImage(); 
+        if (getOneObjectAtOffset(0, image.getHeight()/2, Mover.class) == null) 
+        {
+            vmg2_down= true;
+        }
+        else  
+        {
+            vmg2_down = false;
+        }
+        if (getOneObjectAtOffset(0, -image.getHeight()/2, Mover.class) == null) 
+        {
+            vmg2_up= true;
+        }
+        else  
+        {
+            vmg2_up = false;
+        }
+        if (getOneObjectAtOffset(-image.getWidth()/2,0, Mover.class) == null) 
+        {
+            vmg2_left= true;
+        }
+        else  
+        {
+            vmg2_left = false;
+        }
+        if (getOneObjectAtOffset(+image.getWidth()/2,0, Mover.class) == null) 
+        {
+            vmg2_right= true;
+        }
+        else  
+        {
+            vmg2_right = false;
+        }
+    }
+}
