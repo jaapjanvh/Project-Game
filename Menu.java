@@ -30,20 +30,21 @@ public class Menu extends World
 
     public void prepare()
     {
-        GreenfootImage image = new GreenfootImage("Prachtig2.png");
+        GreenfootImage image = new GreenfootImage("Prachtig3.png");
         // image.scale(PortWorld.gridWidth * PortWorld.gridSize, PortWorld.gridHeight * PortWorld.gridSize); // scaling the original image
         setBackground(image); 
 
         gameknop1 = new GameKnop();
         addObject(gameknop1,400,140);
+        gameknop1.setImage("MiniGame1Button.png");
         
         gameknop2 = new GameKnop();
-        addObject(gameknop2,400,285);
-        //gameknop2.setImage("C:/Users/JaapJan/Documents/Project Game/Project-Game/images/Screenshot_3.png");
+        addObject(gameknop2,400,240);
+        gameknop2.setImage("MiniGame2Button.png");
 
         gameknop3 = new GameKnop();
-        addObject(gameknop3,400,390);
-        //gameknop3.setImage("C:/Users/JaapJan/Documents/Project Game/Project-Game/images/Screenshot_4.png");
+        addObject(gameknop3,400,340);
+        gameknop3.setImage("MiniGame3Button.png");
     }
 
     public void act()
