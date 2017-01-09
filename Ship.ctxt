@@ -1,15 +1,17 @@
 #BlueJ class context
 comment0.target=Ship
 comment1.params=
-comment1.target=Ship()
+comment1.target=int\ getUnloadingSpeed()
 comment2.params=
-comment2.target=void\ act()
+comment2.target=int\ getScoreIncrement()
 comment3.params=
-comment3.target=void\ handleArrowCollision()
+comment3.target=void\ act()
 comment4.params=
-comment4.target=void\ handleShipCollision()
+comment4.target=void\ handleArrowCollision()
 comment5.params=
-comment5.target=void\ handleBorderCollision()
+comment5.target=void\ handleShipCollision()
 comment6.params=
-comment6.target=void\ handleUnloadingPointCollision()
-numComments=7
+comment6.target=void\ handleBorderCollision()
+comment7.params=
+comment7.target=void\ handleUnloadingPointCollision()
+numComments=8

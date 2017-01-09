@@ -1,12 +1,12 @@
 import greenfoot.*;
 import java.awt.Color;
 
-public class Counter extends Actor
+public class MG1Counter extends Actor
 {
     
     public int score = 0;
     
-    public Counter() {
+    public MG1Counter() {
         this.updateImage();
     }
     

@@ -1,18 +1,17 @@
 import greenfoot.*;
 import java.util.List;
+import java.awt.Color;
 
-public class Ship extends Actor
+public abstract class Ship extends Actor
 {
-    
+ 
     private int movementSpeed = 1;
     private ProgressBar progressBar;
     private List<Ship> ships;
     
-    public Ship () {
-        this.setImage(new GreenfootImage("http://oi66.tinypic.com/2gufxo5.jpg"));
-        this.getImage().scale(48, 12);
-        this.getImage().rotate(180); 
-    }
+    abstract public int getUnloadingSpeed();
+    
+    abstract public int getScoreIncrement();
     
     public void act() 
     {
@@ -38,14 +37,14 @@ public class Ship extends Actor
        Ship ship = (Ship) this.getOneIntersectingObject(Ship.class);
        
        if (null != ship) {
-            GridWorld world = (GridWorld) getWorld();
+            PortWorld world = (PortWorld) getWorld();
             world.triggerGameOver();
        }
     }
     
     private void handleBorderCollision() {
-        if (isTouching(Wall.class)) {
-            GridWorld world = (GridWorld) getWorld();
+        if (isTouching(MG1Wall.class)) {
+            PortWorld world = (PortWorld) getWorld();
             world.triggerGameOver();
         }
     }
@@ -68,12 +67,12 @@ public class Ship extends Actor
         }
         
         if (this.progressBar != null) {
-            this.progressBar.incrementProgress(50);
+            this.progressBar.incrementProgress(this.getUnloadingSpeed());
             
             if (this.progressBar.progress == 9900) {
-                List<Counter> counters = getWorld().getObjects(Counter.class);
-                for (Counter c: counters) {
-                    c.incrementScore(10);
+                List<MG1Counter> counters = getWorld().getObjects(MG1Counter.class);
+                for (MG1Counter c: counters) {
+                    c.incrementScore(this.getScoreIncrement());
                 }
                 
                 getWorld().removeObject(this.progressBar);
