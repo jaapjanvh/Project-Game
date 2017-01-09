@@ -4,8 +4,8 @@ import java.util.List;
 public class GridWorld extends World
 {
     
-    private static final int gridWidth = 24;
-    private static final int gridHeight = 24;
+    public static final int gridWidth = 24;
+    public static final int gridHeight = 24;
     private static Actor[][] grid = new Actor[gridWidth][gridHeight];
     
     private int counter = 0;
