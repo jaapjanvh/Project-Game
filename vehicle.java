@@ -16,6 +16,7 @@ public class vehicle extends add_vehicle
     //public static int world.vmg2_redcontainer = 2;
     //public static int world.vmg2_greencontainer = 2;
     GreenfootImage image = getImage();
+    MiniGame2 world = (MiniGame2)getWorld();
      /**
      * Act - do whatever the vehicle wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -33,7 +34,7 @@ public class vehicle extends add_vehicle
         Actor red = getOneIntersectingObject(container_red.class);
         Actor green = getOneIntersectingObject(container_green.class);
         Actor blue = getOneIntersectingObject(container_blue.class);
-        MyWorld world = (MyWorld)getWorld();
+        MiniGame2 world = (MiniGame2)getWorld();
         /**
          * If there is still a container in every color, set random colored truck
          * 

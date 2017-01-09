@@ -20,14 +20,14 @@ public class Mover extends Actor
     public boolean vmg2_down1;
     public boolean vmg2_up1;
     public boolean vmg2_right1;
-    public boolean vmg2_left1;        
+    public boolean vmg2_left1; 
+    MiniGame2 world = (MiniGame2)getWorld();
     public void c_move()
     /*
      * When the hook touches the container and space is pressed and held, it will move with the hook until the spacebar is released.
      */
 
     {
-        MyWorld world = (MyWorld)getWorld();
         if (getOneIntersectingObject(hook.class) != null  &&Greenfoot.isKeyDown("space")) 
         { 
             setLocation(world.hook.getX(),world.hook.getY()+100);
@@ -36,8 +36,8 @@ public class Mover extends Actor
 
     public void mg2_MoveCont()
     {
-        MyWorld world = (MyWorld)getWorld();
-        GreenfootImage image = getImage(); 
+        GreenfootImage image = getImage();
+        MiniGame2 world = (MiniGame2)getWorld();
         if (world.hook.vmg2_hooked == true && getOneIntersectingObject(hook.class) != null)
         {
             setLocation(world.hook.getX(),world.hook.getY()+55);  
@@ -50,7 +50,6 @@ public class Mover extends Actor
 
     public void mg2_MoveCont1()
     {
-        MyWorld world = (MyWorld)getWorld();
         GreenfootImage image = getImage();
         //System.out.println("mg2_MoveCont1" + getOneObjectAtOffset(0, image.getHeight()/2, null));
         if (world.hook.vmg2_hooked == true && getOneIntersectingObject(hook.class) != null)
@@ -131,7 +130,6 @@ public class Mover extends Actor
     {
         GreenfootImage image = getImage();
         Actor abc = getOneObjectAtOffset(0,image.getHeight()/2, Mover.class);
-        MyWorld world = (MyWorld)getWorld();
         if (getOneObjectAtOffset(0,image.getHeight()/2, Mover.class) != null)
         {
             setLocation(abc.getX(),abc.getY()-image.getHeight());
