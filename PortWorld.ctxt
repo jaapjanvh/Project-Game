@@ -8,4 +8,6 @@ comment3.params=x\ y
 comment3.target=void\ removeObjectAt(int,\ int)
 comment4.params=
 comment4.target=void\ triggerGameOver()
-numComments=5
+comment5.params=
+comment5.target=void\ act()
+numComments=6

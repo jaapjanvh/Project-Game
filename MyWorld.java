@@ -28,8 +28,12 @@ public class MyWorld extends World
     {
         count_containers();
         count_trucks();
+        if(Greenfoot.isKeyDown("escape")) {
+            Greenfoot.setWorld(new Menu());
+        }
     }
-    
+    
+
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.

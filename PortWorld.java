@@ -78,4 +78,9 @@ public class PortWorld extends World
         Greenfoot.stop();
     }
     
+    public void act () {
+        if(Greenfoot.isKeyDown("escape")) {
+            Greenfoot.setWorld(new Menu());
+        }
+    }
 }

@@ -420,4 +420,10 @@ public class TegelWorld extends World
         
         return new Level(design,19);
     }
+    
+    public void act(){
+        if(Greenfoot.isKeyDown("escape")) {
+            Greenfoot.setWorld(new Menu());
+        }
+    }
 }
