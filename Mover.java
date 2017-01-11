@@ -22,6 +22,7 @@ public class Mover extends Actor
     public boolean vmg2_right1;
     public boolean vmg2_left1; 
     MiniGame2 world = (MiniGame2)getWorld();
+    public boolean vmg2_attached;
     public void c_move()
     /*
      * When the hook touches the container and space is pressed and held, it will move with the hook until the spacebar is released.
@@ -40,7 +41,10 @@ public class Mover extends Actor
         MiniGame2 world = (MiniGame2)getWorld();
         if (world.hook.vmg2_hooked == true && getOneIntersectingObject(hook.class) != null)
         {
+            // (vmg2_attached == true)
+            //{
             setLocation(world.hook.getX(),world.hook.getY()+55);  
+            //}
             //if (getOneObjectAtOffset(+image.getWidth()/2,0, null) == null && getOneObjectAtOffset(-image.getWidth()/2,0, null) == null)
             //{
             //    setLocation(world.hook.getX(),world.hook.getY()+40);  
@@ -51,17 +55,31 @@ public class Mover extends Actor
     public void mg2_MoveCont1()
     {
         GreenfootImage image = getImage();
-        //System.out.println("mg2_MoveCont1" + getOneObjectAtOffset(0, image.getHeight()/2, null));
+        MiniGame2 world = (MiniGame2)getWorld();
         if (world.hook.vmg2_hooked == true && getOneIntersectingObject(hook.class) != null)
         {
+            if (vmg2_right1 == true )
+            {
+                setLocation(world.hook.getX(),world.hook.getY()+55); 
+            }
+            if (vmg2_left1 == true)
+            {
+                setLocation(world.hook.getX(),world.hook.getY()+55); 
+            }
+            else
+            {
+                System.out.println("TESTBRAMMMIEEEEEE");
+                setLocation(this.getX(),this.getY());
+            }
+            if (vmg2_up1 == true)
+            {
+                setLocation(world.hook.getX(),world.hook.getY()+55); 
+            }
             if (vmg2_down1 == true)
             {
-                setLocation(world.hook.getX(),world.hook.getY()+55);  
+                setLocation(world.hook.getX(),world.hook.getY()+55); 
             }
-            //if (getOneObjectAtOffset(+image.getWidth()/2,0, null) == null && getOneObjectAtOffset(-image.getWidth()/2,0, null) == null)
-            //{
-            //    setLocation(world.hook.getX(),world.hook.getY()+40);  
-            //}
+
         }
     }
 
@@ -92,7 +110,7 @@ public class Mover extends Actor
     public void canmove_container()
     {
         GreenfootImage image = getImage(); 
-        if (getOneObjectAtOffset(0, image.getHeight()/2, null) == null) 
+        if (getOneObjectAtOffset(0, image.getHeight()/2, Mover.class) == null) 
         {
             vmg2_down1= true;
         }
@@ -100,7 +118,7 @@ public class Mover extends Actor
         {
             vmg2_down1 = false;
         }
-        if (getOneObjectAtOffset(0, -image.getHeight()/2, null) == null) 
+        if (getOneObjectAtOffset(0, -image.getHeight()/2, Mover.class) == null) 
         {
             vmg2_up1= true;
         }
@@ -108,7 +126,7 @@ public class Mover extends Actor
         {
             vmg2_up1 = false;
         }
-        if (getOneObjectAtOffset(-image.getWidth()/2,0, null) == null) 
+        if (getOneObjectAtOffset(-image.getWidth()/2,0, Mover.class) == null) 
         {
             vmg2_left1= true;
         }
@@ -116,7 +134,7 @@ public class Mover extends Actor
         {
             vmg2_left1 = false;
         }
-        if (getOneObjectAtOffset(+image.getWidth()/2,0, null) == null) 
+        if (getOneObjectAtOffset(+image.getWidth()/2,0, Mover.class) == null) 
         {
             vmg2_right1= true;
         }
@@ -130,10 +148,12 @@ public class Mover extends Actor
     {
         GreenfootImage image = getImage();
         Actor abc = getOneObjectAtOffset(0,image.getHeight()/2, Mover.class);
+        MiniGame2 world = (MiniGame2)getWorld();
         if (getOneObjectAtOffset(0,image.getHeight()/2, Mover.class) != null)
         {
             setLocation(abc.getX(),abc.getY()-image.getHeight());
-            world.hook.vmg2_hooked = true;
+
+            System.out.println("mg2_TouchContainer: " + vmg2_attached);
         }
     }
 }

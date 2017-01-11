@@ -9,6 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class container_red extends Mover
 {
     public static String vmg2_Red = "red";
+    public boolean vmg2_down2;
+    public boolean vmg2_up2;
+    public boolean vmg2_right2;
+    public boolean vmg2_left2; 
     /**
      * Act - do whatever the container wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -30,8 +34,10 @@ public class container_red extends Mover
     {
         GreenfootImage image = getImage();
         doGravity();
-        mg2_MoveCont();
+        canmove_container();
+        System.out.println(vmg2_left1);
+        mg2_MoveCont1();
         mg2_TouchContainer();
-
     }
 }
+

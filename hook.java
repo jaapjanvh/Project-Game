@@ -26,13 +26,14 @@ public class hook extends Actor
         image.scale(22, 60);
         setImage(image);    
     } 
-
     public void act() {   
         MiniGame2 world = (MiniGame2)getWorld();
-        //canmove();
+        canmove();
         checkInput();
         maxmove();
         mg2_hooked();
+        GreenfootImage image = getImage();  
+        //System.out.println("Hook: " + getOneObjectAtOffset(0, image.getHeight()/2, null));
         //System.out.println("Red: " + world.vmg2_redcontainer + " ||Blue: " + world.vmg2_bluecontainer + " ||Green: " + world.vmg2_greencontainer);
         //GreenfootImage image = getImage();
         //System.out.println(getOneObjectAtOffset(0, image.getHeight()/2, Mover.class));
@@ -74,14 +75,14 @@ public class hook extends Actor
     private void canmove()
     {
         GreenfootImage image = getImage(); 
-        if (getOneObjectAtOffset(0, image.getHeight()/2, null) == null) 
-        {
-            vmg2_down= true;
-        }
-        else  
-        {
-            vmg2_down = false;
-        }
+        //if (getOneObjectAtOffset(0, image.getHeight()/2, null) == null) 
+        //{
+        //    vmg2_down= true;
+        //}
+        //else  
+        //{
+        //    vmg2_down = false;
+        //}
         if (getOneObjectAtOffset(0, -image.getHeight()/2, null) == null) 
         {
             vmg2_up= true;
@@ -115,7 +116,6 @@ public class hook extends Actor
         if (getY()<40) 
             setLocation(getX(),40);
     }
-
     public void mg2_hooked()
     {
         if (getOneIntersectingObject(Mover.class) != null)
@@ -126,5 +126,5 @@ public class hook extends Actor
         {
             vmg2_hooked = false;
         }
-    }
+    }    
 }

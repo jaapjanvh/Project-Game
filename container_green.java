@@ -30,6 +30,7 @@ public class container_green extends Mover
         // Add your action code here.
         doGravity();
         mg2_MoveCont();
+        //canmove_container();
     }
     public void test()
     {
