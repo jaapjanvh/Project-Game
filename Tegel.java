@@ -72,7 +72,9 @@ public class Tegel extends Actor
     private void TekenPijp(String afbeelding)
     {
         setImage(afbeelding);
-        getImage().scale(TegelWorld.gridSize+120, TegelWorld.gridSize+120);
+        //getImage().scale(TegelWorld.gridSize+120, TegelWorld.gridSize+120);
         
+        int size= TegelWorld.gridSize * 4 +15;
+        getImage().scale(size, size);
     }
 }

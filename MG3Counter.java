@@ -16,14 +16,12 @@ public class MG3Counter extends Actor
         if (move<=0)
                 {
                     getWorld().addObject(new TryAgain(), getWorld().getWidth()/2, getWorld().getHeight()/2);
-                    //Greenfoot.setWorld(new TegelWorld());
-
                 }
         updateImage();
     }
     
     private void updateImage() {
-        setImage(new GreenfootImage("Moves: " + move, 32, Color.WHITE, Color.BLUE));
+        setImage(new GreenfootImage("Moves: " + move, 20, Color.WHITE, Color.BLUE));
     }
     
 }

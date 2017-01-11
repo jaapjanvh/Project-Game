@@ -12,7 +12,7 @@ public class TegelWorld extends World
     
     private MG3Counter the_counter;
     private GameMaster gameMaster;
-    public static final int gridSize = 32;
+    public static final int gridSize = 20;
     public Tegel[][] huidigLevel = null;
     
     
