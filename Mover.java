@@ -29,6 +29,7 @@ public class Mover extends Actor
      */
 
     {
+        world = (MiniGame2)getWorld();
         if (getOneIntersectingObject(hook.class) != null  &&Greenfoot.isKeyDown("space")) 
         { 
             setLocation(world.hook.getX(),world.hook.getY()+100);
@@ -56,55 +57,40 @@ public class Mover extends Actor
     {
         GreenfootImage image = getImage();
         MiniGame2 world = (MiniGame2)getWorld();
-        if (world.hook.vmg2_hooked == true && getOneIntersectingObject(hook.class) != null)
+        if (getOneIntersectingObject(hook.class) != null && world.hook.vmg2_hooked == false)
         {
             if (vmg2_right1 == true )
             {
-                setLocation(world.hook.getX(),world.hook.getY()+55); 
+                setLocation(world.hook.getX(),world.hook.getY()+55);
+                world.hook.vmg2_hooked = true;
             }
             if (vmg2_left1 == true)
             {
-                setLocation(world.hook.getX(),world.hook.getY()+55); 
+                setLocation(world.hook.getX(),world.hook.getY()+55);
+                world.hook.vmg2_hooked = true;
             }
             else
             {
-                System.out.println("TESTBRAMMMIEEEEEE");
+                //System.out.println("TESTBRAMMMIEEEEEE");
                 setLocation(this.getX(),this.getY());
             }
             if (vmg2_up1 == true)
             {
-                setLocation(world.hook.getX(),world.hook.getY()+55); 
+                setLocation(world.hook.getX(),world.hook.getY()+55);
+                world.hook.vmg2_hooked = true;
             }
-            if (vmg2_down1 == true)
+            if (vmg2_down1 == true && world.hook.vmg2_hooked == false)
             {
-                setLocation(world.hook.getX(),world.hook.getY()+55); 
+                setLocation(world.hook.getX(),world.hook.getY()+55);
+                world.hook.vmg2_hooked = true;
             }
 
         }
     }
 
-    public void doGravity()
-    {
-        if(vSpeed > 0) return;        
-        if(vSpeed <= 0)  vSpeed = -1;
-        setLocation(getX(), getY() + vSpeed);
-        vSpeed = vSpeed + acceleration;
-
-    }
-
-    protected void setMovementSpeed(int newSpeed)
-    {
-        containerspeed = newSpeed;
-    }
-
     protected void setBlockingClasses(Class[] c)
     {
         barrier = c;
-    }
-
-    protected void setGravity(int g)
-    {
-        acceleration = g;
     }
 
     public void canmove_container()
@@ -156,4 +142,5 @@ public class Mover extends Actor
             System.out.println("mg2_TouchContainer: " + vmg2_attached);
         }
     }
+    
 }

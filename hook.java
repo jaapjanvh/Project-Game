@@ -14,7 +14,7 @@ public class hook extends Actor
     public static boolean vmg2_right= true;
     public static boolean vmg2_left= true;
     public static int vmg2_speed = 3 ;
-    public boolean vmg2_hooked;    
+    public boolean vmg2_hooked = false;    
     /**
      * Act - do whatever the hook wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -31,8 +31,9 @@ public class hook extends Actor
         canmove();
         checkInput();
         maxmove();
-        mg2_hooked();
-        GreenfootImage image = getImage();  
+        //mg2_hooked();
+        GreenfootImage image = getImage();
+        vmg2_hooked = false;
         //System.out.println("Hook: " + getOneObjectAtOffset(0, image.getHeight()/2, null));
         //System.out.println("Red: " + world.vmg2_redcontainer + " ||Blue: " + world.vmg2_bluecontainer + " ||Green: " + world.vmg2_greencontainer);
         //GreenfootImage image = getImage();
