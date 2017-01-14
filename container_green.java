@@ -29,7 +29,7 @@ public class container_green extends Mover
     public void act() 
     {
         // Add your action code here.
-        mg2_MoveCont();
+        //mg2_MoveCont();
         //canmove_container();
         //als rechterkant van de container groter is dan de linkerkant van het schip en de rechterkant is kleiner dan het midden van het schip, staat het gewicht van de container op links
         //als linkerkant van de container kleiner is dan de rechterkant van het schip en de linkerkant is groter dan het midden van het schip, staat het gewicht van de container op rechts

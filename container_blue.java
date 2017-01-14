@@ -33,7 +33,7 @@ public class container_blue extends Mover
     {
         // Add your action code here.
         //c_move();
-        mg2_MoveCont();
+        //mg2_MoveCont();
         //System.out.println(world.hook.vmg2_hooked);
         //mg2_setImage();
         //als rechterkant van de container groter is dan de linkerkant van het schip en de rechterkant is kleiner dan het midden van het schip, staat het gewicht van de container op links

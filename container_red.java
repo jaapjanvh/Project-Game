@@ -25,21 +25,28 @@ public class container_red extends Mover
         GreenfootImage image = getImage();  
         image.scale(70, 70);
         setImage(image);
-
+        
+        setGravity(1);
+        setMovementSpeed(5);
+        
         setBlockingClasses(new Class[]{container_red.class});
         setBlockingClasses(new Class[]{container_green.class});
         setBlockingClasses(new Class[]{container_blue.class});
-        setBlockingClasses(new Class[]{boat.class});
+        //setBlockingClasses(new Class[]{boat.class});
     }
 
     public void act() 
     {
+        if(Greenfoot.isKeyDown("space") == false){
+            doGravity();  
+        }
         GreenfootImage image = getImage();
-        canmove_container();
+        //canmove_container();
         //System.out.println(vmg2_left1);
         mg2_MoveCont1();
+        
         //c_move();
-        mg2_TouchContainer();
+        //mg2_TouchContainer();
         
         //als rechterkant van de container groter is dan de linkerkant van het schip en de rechterkant is kleiner dan het midden van het schip, staat het gewicht van de container op links
         //als linkerkant van de container kleiner is dan de rechterkant van het schip en de linkerkant is groter dan het midden van het schip, staat het gewicht van de container op rechts

@@ -9,6 +9,7 @@ import java.util.List;
  */
 public class Mover extends Actor
 {
+    
     private int acceleration = 0;
     private int vSpeed = 0;
     private int containerspeed = 0;  
@@ -21,16 +22,17 @@ public class Mover extends Actor
     public boolean vmg2_up1;
     public boolean vmg2_right1;
     public boolean vmg2_left1; 
-    MiniGame2 world = (MiniGame2)getWorld();
+    //MiniGame2 world = (MiniGame2)getWorld();
     public boolean vmg2_attached;
+    
     public void c_move()
     /*
      * When the hook touches the container and space is pressed and held, it will move with the hook until the spacebar is released.
      */
 
     {
-        world = (MiniGame2)getWorld();
-        if (getOneIntersectingObject(hook.class) != null  &&Greenfoot.isKeyDown("space")) 
+        MiniGame2 world = (MiniGame2)getWorld();
+        if (getOneIntersectingObject(hook.class) != null  && Greenfoot.isKeyDown("space")) 
         { 
             setLocation(world.hook.getX(),world.hook.getY()+100);
         }
@@ -52,7 +54,24 @@ public class Mover extends Actor
             //}
         }
     }
-
+    
+    public void doGravity()
+    {
+        if(isTouching(null)){ vSpeed = 0;}
+        setLocation(getX(), getY() - vSpeed);
+        vSpeed = vSpeed - acceleration;
+    }
+    
+    protected void setMovementSpeed(int newSpeed)
+    {
+        containerspeed = newSpeed;
+    }
+    
+    protected void setGravity(int g)
+    {
+        acceleration = g;
+    }
+    
     public void mg2_MoveCont1()
     {
         GreenfootImage image = getImage();

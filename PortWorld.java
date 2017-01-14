@@ -2,7 +2,7 @@ import greenfoot.*;
 import java.util.List;
 
 public class PortWorld extends World
-{
+{ 
     
     public static final int gridWidth = 24;
     public static final int gridHeight = 24;
