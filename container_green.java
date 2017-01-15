@@ -21,16 +21,19 @@ public class container_green extends Mover
         GreenfootImage image = getImage();  
         image.scale(70, 70);
         setImage(image);
-        
+                setGravity(1);
+        setMovementSpeed(5);
         setBlockingClasses(new Class[]{container_red.class});
         setBlockingClasses(new Class[]{container_green.class});
         setBlockingClasses(new Class[]{container_blue.class});
     }
     public void act() 
     {
-        // Add your action code here.
-        //mg2_MoveCont();
-        //canmove_container();
+        if(Greenfoot.isKeyDown("space") == false){
+            doGravity();  
+        }
+        GreenfootImage image = getImage();
+        mg2_MoveCont();
         //als rechterkant van de container groter is dan de linkerkant van het schip en de rechterkant is kleiner dan het midden van het schip, staat het gewicht van de container op links
         //als linkerkant van de container kleiner is dan de rechterkant van het schip en de linkerkant is groter dan het midden van het schip, staat het gewicht van de container op rechts
         if(
@@ -42,12 +45,4 @@ public class container_green extends Mover
         &&  getX() - (getImage().getWidth() / 2) > getWorld().getObjects(boat.class).get(0).getX()) {
             aboveRightBoat = true;}
     }
-    public void test()
-    {
-        for(int i=1; i<11; i++){
-            System.out.println("Count is: " + i);
-            
-         }
-    }
-
 }

@@ -29,7 +29,7 @@ public class add_vehicle extends Actor
                  if (world.vmg2_truck == 0)
                  {
                  vehicle vehicle = new vehicle();
-                 getWorld().addObject(vehicle,575,610);
+                 getWorld().addObject(vehicle,565,610);
                 }
         }
         else

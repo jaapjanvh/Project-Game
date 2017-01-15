@@ -23,7 +23,6 @@ public class Menu extends World
     private InstructionButton button2;
     private InstructionButton button3;
 
-    
     public Menu()
     {    
         // Create a new world with gridsize (same as the other worlds)

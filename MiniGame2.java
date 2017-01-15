@@ -41,55 +41,71 @@ public class MiniGame2 extends World
     private void prepare()
     {
         hook = new hook();
-        counter();
-        //        hook.setLocation(731,76);        
+        counter();       
         addObject(hook,90,60);
         rope_small rope_small = new rope_small();
         addObject(rope_small,90,0);
-        //rope_small rope_small2 = new rope_small();
-        //addObject(rope_small2,82,0);
         crane crane = new crane();
         addObject(crane,271,25);
+        add_vehicle add_vehicle = new add_vehicle();
+        addObject(add_vehicle,25,725);        
         boat boat = new boat();
         addObject(boat,220,650);
-        //vehicle vehicle = new vehicle();
-        //addObject(vehicle,575,610);
         water water = new water();
         addObject(water,600,700);
         road road = new road();
-        addObject(road,500,700);
+        addObject(road,485,700);
         road road2 = new road();
-        addObject(road2,600,700);
-        road road3 = new road();
-        addObject(road3,700,700);
-
-        //vehicle vehicle = new vehicle();
-        //addObject(vehicle,-1000,-10000);   
-
-        //System.out.println(v_test);
-        add_vehicle add_vehicle = new add_vehicle();
-        addObject(add_vehicle,25,725);
-
-        MG2_HELP mg2_help = new MG2_HELP();
-        addObject(mg2_help,1265,25);
+        addObject(road2,585,700);
+        road road5 = new road();
+        addObject(road5,630,700);        
     }
     
     public void counter()
     {
-             // Adding containers to world
-        addObject(new container_blue(), 35, 550);
-        container_blue container_blue2 = new container_blue();
-        addObject(container_blue2,105,550);        
-        container_blue container_blue3 = new container_blue();
-        addObject(container_blue3,180,550);
-        //container_red container_red = new container_red();
-        //addObject(container_red,255,550);
-        container_green container_green = new container_green();
-        addObject(container_green,330,550);
-        container_green container_green2 = new container_green();
-        addObject(container_green2,405,550);
+        // Adding containers to world
+        container_blue container_blue = new container_blue();        
+        addObject(container_blue, 35, 550);
         container_red container_red2 = new container_red();
-        addObject(container_red2,255,465);        
+        addObject(container_red2,35,485); 
+        container_green container_green4 = new container_green();
+        addObject(container_green4,35,420);        
+        
+        container_green container_green3 = new container_green();
+        addObject(container_green3,97,550);
+        container_blue container_blue2 = new container_blue();        
+        addObject(container_blue2,97,485);
+        
+        container_blue container_blue4 = new container_blue();
+        addObject(container_blue4,159,485);        
+        container_blue container_blue3 = new container_blue();
+        addObject(container_blue3,159,550);
+        
+        container_red container_red = new container_red();
+        addObject(container_red,221,550);
+        container_red container_red3 = new container_red();
+        addObject(container_red3,221,485);
+        container_green container_green5 = new container_green();
+        addObject(container_green5,221,420);        
+        
+        container_green container_green = new container_green();
+        addObject(container_green,283,550);
+        container_green container_green7 = new container_green();
+        addObject(container_green7,283,485);
+
+        container_green container_green6 = new container_green();
+        addObject(container_green6,345,485);
+        container_red container_red4 = new container_red();
+        addObject(container_red4,345,550);
+        
+        container_green container_green2 = new container_green();
+        addObject(container_green2,407,550);
+        container_blue container_blue5 = new container_blue();
+        addObject(container_blue5,407,485);
+        container_red container_red5 = new container_red();
+        addObject(container_red5,407,420);
+
+
         // added all the containers
     }
     public void count_containers()

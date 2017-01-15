@@ -9,10 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class container_red extends Mover
 {
     public static String vmg2_Red = "red";
-    public boolean vmg2_down2;
-    public boolean vmg2_up2;
-    public boolean vmg2_right2;
-    public boolean vmg2_left2;
     public boolean aboveLeftBoat = false;
     public boolean aboveRightBoat = false;
     /**
@@ -41,12 +37,7 @@ public class container_red extends Mover
             doGravity();  
         }
         GreenfootImage image = getImage();
-        //canmove_container();
-        //System.out.println(vmg2_left1);
-        mg2_MoveCont1();
-        
-        //c_move();
-        //mg2_TouchContainer();
+        mg2_MoveCont();
         
         //als rechterkant van de container groter is dan de linkerkant van het schip en de rechterkant is kleiner dan het midden van het schip, staat het gewicht van de container op links
         //als linkerkant van de container kleiner is dan de rechterkant van het schip en de linkerkant is groter dan het midden van het schip, staat het gewicht van de container op rechts
