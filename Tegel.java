@@ -13,12 +13,12 @@ public class Tegel extends Actor
     
     
     public Tegel(boolean noord,boolean oost,boolean zuid,boolean west, boolean isStart, boolean isEind, boolean isRotatable, String droogAfbeelding, String waterAfbeelding) {
-        Open=new HashMap<Richting,Boolean>(){{
-            put(Richting.Noord,noord);
-            put(Richting.Oost,oost);
-            put(Richting.Zuid,zuid);
-            put(Richting.West,west);
-        }};
+        Open=new HashMap<Richting,Boolean>();
+        Open.put(Richting.Noord,noord);
+        Open.put(Richting.Oost,oost);
+        Open.put(Richting.Zuid,zuid);
+        Open.put(Richting.West,west);
+        
         IsStart=isStart;
         IsEind=isEind;
         IsRotatable=isRotatable;
