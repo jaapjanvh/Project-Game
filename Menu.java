@@ -40,7 +40,7 @@ public class Menu extends World
         gameknop1 = new GameKnop();
         addObject(gameknop1,400,140);
         gameknop1.setImage("MiniGame1Button.png");
-        
+
         gameknop2 = new GameKnop();
         addObject(gameknop2,400,240);
         gameknop2.setImage("MiniGame2Button.png");
@@ -48,16 +48,16 @@ public class Menu extends World
         gameknop3 = new GameKnop();
         addObject(gameknop3,400,340);
         gameknop3.setImage("MiniGame3Button.png");
-        
+
         button1 = new InstructionButton();
         addObject(button1,530,140);
         Instructiebutton.scale(50,50);
         button1.setImage(Instructiebutton);
-        
+
         button2 = new InstructionButton();
         addObject(button2,530,240);
         button2.setImage(Instructiebutton);
-                
+
         button3 = new InstructionButton();
         addObject(button3,530,340);
         button3.setImage(Instructiebutton);
