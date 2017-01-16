@@ -72,14 +72,14 @@ public class hook extends Actor
     private void canmove()
     {
         GreenfootImage image = getImage(); 
-        //if (getOneObjectAtOffset(0, image.getHeight()/2, null) == null) 
-        //{
-        //    vmg2_down= true;
-        //}
-        //else  
-        //{
-        //    vmg2_down = false;
-        //}
+        if (getOneObjectAtOffset(0, image.getHeight()/2, null) == null) 
+        {
+            vmg2_down= true;
+        }
+        else  
+        {
+            vmg2_down = false;
+        }
         if (getOneObjectAtOffset(0, -image.getHeight()/2, null) == null) 
         {
             vmg2_up= true;

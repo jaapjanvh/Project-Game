@@ -12,9 +12,6 @@ public class vehicle extends add_vehicle
     public int vRandom = Greenfoot.getRandomNumber(3);
     public int vRandom1 = Greenfoot.getRandomNumber(2);    
     private String vColor = "blank";
-    //public static int world.vmg2_bluecontainer = 3;
-    //public static int world.vmg2_redcontainer = 2;
-    //public static int world.vmg2_greencontainer = 2;
     GreenfootImage image = getImage();
     MiniGame2 world = (MiniGame2)getWorld();
      /**
