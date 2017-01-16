@@ -37,7 +37,7 @@ public class add_vehicle extends Actor
             World myWorld = getWorld();
             GameOver gameover = new GameOver();
             myWorld.addObject(gameover, myWorld.getWidth()/2, myWorld.getHeight()/2);
-            Greenfoot.stop();           
-        }
+            Greenfoot.setWorld(new Menu());
+          }
     }
 }

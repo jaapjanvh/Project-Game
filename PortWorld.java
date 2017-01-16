@@ -16,7 +16,7 @@ public class PortWorld extends World
     {    
         super(gridWidth * gridSize, gridHeight * gridSize, 1);
         
-        setPaintOrder(ProgressBar.class, Ship.class, UnloadingPoint.class, MG1Counter.class, MG1Wall.class);
+        setPaintOrder(GameOver.class,ProgressBar.class, Ship.class, UnloadingPoint.class, MG1Counter.class, MG1Wall.class);
         
         addObjectToGrid(new MG1Counter(), gridWidth / 2 - 1, 0);
 
@@ -73,9 +73,16 @@ public class PortWorld extends World
     }
     
     public void triggerGameOver() {
+        GreenfootSound sound = new GreenfootSound("Titanic.mp3");
         this.addObject(new GameOver(), this.getWidth() / 2, this.getHeight() / 2);
-        Greenfoot.playSound("Titanic.mp3");
-        Greenfoot.stop();
+        sound.play();//start playing the sound;
+
+
+        //Greenfoot.playSound("Titanic.mp3";
+        Greenfoot.delay(1000);
+        sound.stop();//stop playing the sound;        
+        Greenfoot.setWorld(new Menu());
+        //Greenfoot.stop();
     }
     
     public void act () {

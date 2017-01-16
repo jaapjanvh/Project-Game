@@ -27,13 +27,9 @@ public class hook extends Actor
         setImage(image);    
     } 
     public void act() {   
-        MiniGame2 world = (MiniGame2)getWorld();
         canmove();
         checkInput();
         maxmove();
-        //mg2_hooked();
-        GreenfootImage image = getImage();
-        //vmg2_hooked = false;
     }
 
     private void checkInput()

@@ -17,11 +17,7 @@ public class rope_small extends Actor
     {
         checkInput();
         maxmove();
-
     }
-
-    //&& getOneIntersectingObject(container1.class) == null
-
     public rope_small()
     {
         GreenfootImage image = getImage();  
